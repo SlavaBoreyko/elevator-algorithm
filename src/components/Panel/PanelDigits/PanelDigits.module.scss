@@ -1,0 +1,19 @@
+.panelContainer {
+    height: 7.5rem;
+    width: 6rem;
+    background-color: #DFE0E4;
+    margin: 0.5rem;
+    border-radius: 0.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    row-gap: 2px;
+    column-gap: 2px;
+    padding: 2px;
+}
+
+.btnDigit {
+    color: #DFE0E4;
+    font-size: 1.3rem;
+    // font-weight: 300;
+}

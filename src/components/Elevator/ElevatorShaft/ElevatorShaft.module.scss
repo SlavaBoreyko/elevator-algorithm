@@ -1,0 +1,20 @@
+.elevatatorShaftsContainer {
+    position: absolute;
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: 1fr repeat(var(--elevators-amount),  10rem 1fr) ;
+}
+
+.elevatatorShaft {
+    height: 100%;
+    width: 130%;
+    background-color: #55626f0a;
+    margin-left: -15%;
+    border-right: 0.5rem solid #373f471b;
+    border-left: 0.5rem solid #373f471b;
+
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 2rem;
+}
