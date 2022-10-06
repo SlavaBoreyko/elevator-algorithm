@@ -6,12 +6,14 @@ export interface FloorProps {
     evelatorsAmount: number;
     children?: ReactNode;
     floor: number;
+    onClick: any;
 }
 
 const Floor:FC<FloorProps> = ({
   evelatorsAmount,
   children,
   floor,
+  onClick,
 }) => {
   const root = document.documentElement;
   root?.style.setProperty("--elevators-amount", evelatorsAmount.toString());
@@ -19,7 +21,10 @@ const Floor:FC<FloorProps> = ({
   return (
     <div className={s.wall}>
       <div className={s.panelCenter}>
-        <PanelTopDown floor={floor}/>
+        <PanelTopDown 
+            floor={floor}
+            onClick={onClick}
+        />
       </div>
       {children}
     </div>

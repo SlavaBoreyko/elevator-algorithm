@@ -7,3 +7,10 @@
     flex-direction: column;
     justify-content: flex-end;
 }
+.diplaysHeader {
+    background-color: #95AAB5;
+    display: grid;
+    grid-template-columns: 1fr repeat(var(--elevators-amount),  10rem 1fr) ;
+    align-content: center;
+    justify-content: center;
+}

@@ -1,0 +1,29 @@
+.queueFooter {
+    height: 8rem;
+    width: 100vw;
+    display: flex;
+    background-color: #5E6D7A;
+
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #DFE0E4;
+
+    align-items: flex-end;
+    padding: 0 2rem 1rem 2rem;
+}
+
+.displayContainer {
+    width: 50%;
+    margin: 0rem 1rem;
+}
+
+.btnPlayContainer {
+    width: 4rem;
+    height: 4rem;
+    margin: 0.5rem 0.25rem 0.5rem 0.25rem;
+    border: 0.5rem solid #DFE0E4;
+    border-radius: 50%;
+}
+.btnContainer {
+    text-align: center;
+}

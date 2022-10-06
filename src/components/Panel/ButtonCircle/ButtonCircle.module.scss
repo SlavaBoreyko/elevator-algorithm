@@ -4,8 +4,8 @@ button.btnCircleDark {
 
     height: 100%;
     width: 100%;
-    border-radius: 2rem;
-    // margin: 2px;
+    // border-radius: 2rem;
+    border-radius: 50%;
     flex-shrink: 0;
 
     background-color: #425156;
@@ -15,7 +15,6 @@ button.btnCircleDark {
     align-items: center;
 }
 
-button.btnCircleDark:active,
-button.btnCircleDark:visited  {
+button.btnCircleDark:active {
     background-color: #42AE26;
 }

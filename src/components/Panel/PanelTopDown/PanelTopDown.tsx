@@ -6,17 +6,25 @@ import ArrowDOWN from '../ArrowDOWN/ArrowDOWN';
 
 export interface PanelProps {
   floor: number;
+  onClick: any;
 }
 
 const PanelTopDown: FC<PanelProps> = ({
-  floor
+  floor,
+  onClick
 }) => (
   <div className={s.panel}>
     <div className={s.btnContainer}>
-      <ButtonCircle label={<ArrowUP/>}/>
+      <ButtonCircle 
+        label={<ArrowUP/>}
+        onClick={() => onClick({currentFloor: floor, direction: 'UP'}) }
+      />
     </div>
     <div className={s.btnContainer}>
-      <ButtonCircle label={<ArrowDOWN/>}/>
+      <ButtonCircle 
+        label={<ArrowDOWN/>}
+        onClick={() => onClick({currentFloor: floor, direction: 'DOWN'}) }
+      />
     </div>
   </div>
 );

@@ -3,15 +3,21 @@ import s from './ButtonCircle.module.scss';
 
 export interface ButtonCircleProps {
     label?: ReactNode;
-    floor?: number;
+    onClick?: any;
+    padding?: string;
 }
 
 const ButtonCircle: FC<ButtonCircleProps> = ({
   label,
-  floor,
+  onClick,
+  padding,
 }) => (
-  <button className={s.btnCircleDark}
-    onClick={() => console.log(floor)}
+  <button 
+    className={s.btnCircleDark}
+    onClick={onClick}
+    style={padding ? {
+      padding: padding
+    } : {}}
   >
     {label}
   </button>

@@ -5,7 +5,7 @@ import Floor from './components/Floor/Floor';
 
 function App() {
   const floorsAmount = 3;
-  const elevatorsAmount = 6;
+  const elevatorsAmount = 4;
   return (
     <>
       <Building 
