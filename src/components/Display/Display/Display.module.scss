@@ -14,6 +14,8 @@
     font-size: 2rem;
     z-index: 100;
     overflow-y: scroll;
+
+    color: #A7FF8E;
 }
 .flexStart {
     justify-content: flex-start;
@@ -27,9 +29,9 @@
     height: 100%;
 }
 
-.currentFloor {
-    color: #A7FF8E;
-}
+// .greenFont {
+//     color: #A7FF8E;
+// }
 
 .dataItem {
     display: flex;

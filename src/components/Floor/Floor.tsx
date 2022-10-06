@@ -20,10 +20,12 @@ const Floor:FC<FloorProps> = ({
 
   return (
     <div className={s.wall}>
+        
       <div className={s.panelCenter}>
+        <p className={s.numFloor}>{floor}</p>
         <PanelTopDown 
-            floor={floor}
-            onClick={onClick}
+          floor={floor}
+          onClick={onClick}
         />
       </div>
       {children}

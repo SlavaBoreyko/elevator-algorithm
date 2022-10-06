@@ -1,13 +1,13 @@
-
-
 .elevatorBox {
     height: 13rem;
     width: 100%;
     background-color: #2C3338;
-    opacity: 0.3;
+    background-color: #414F59;
+    opacity: 1;
+    transition: all 1s;
     // z-index: 100;
 }
 
-.step {
-    margin-bottom: 15rem;
-}
+// .step {
+//     margin-bottom: 15rem;
+// }

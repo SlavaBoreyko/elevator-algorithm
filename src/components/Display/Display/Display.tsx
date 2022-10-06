@@ -13,17 +13,19 @@ const Display:FC<DisplayProps> = ({
   <>
     {(!Array.isArray(data)) ? (
       <div className={s.displayScreen}>
-        <span className={s.currentFloor}>{data.currentFloor}</span>
-        <div className={s.arrowContainer}>
-          {switchArrowComponent(data.direction)}
-        </div>
+        <span>{data.currentFloor}</span>
+        {(data.direction) && (
+          <div className={s.arrowContainer}>
+            {switchArrowComponent(data.direction)}
+          </div>
+        )}
         <span>{data.nextFloor}</span>
       </div>
     ) : (
       <div className={`${s.displayScreen} ${s.flexStart}`}>
         {data.map((dataItem, index) => (
           <div className={s.dataItem} key={`dataQueue-${index}`}>
-            <span className={s.currentFloor}>{dataItem.currentFloor}</span>
+            <span>{dataItem.currentFloor}</span>
             <div className={s.arrowContainer}>
               {switchArrowComponent(dataItem.direction)}
             </div>

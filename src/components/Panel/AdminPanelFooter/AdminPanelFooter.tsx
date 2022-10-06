@@ -19,20 +19,26 @@ const dataSimulation: dataDestination[] = [
 ];
 
 export interface AdminPanelProps {
-  dataPickUps: dataDestination[]
+  dataPickUps: dataDestination[];
+  playAction: any;
+  stepAction: any;
 }
 
 const AdminPanelFooter:FC<AdminPanelProps> = ({
-  dataPickUps = dataSimulation
+  dataPickUps = dataSimulation,
+  playAction, 
+  stepAction,
 }) => (
   <div className={s.queueFooter}>
-    <ButtonCaption 
+    {/* <ButtonCaption 
       caption='Play'
       label={<img style={{ width: '40%', marginLeft: '0.2rem'}} src={iconPlay}/>}
-    />
+      onClick={playAction}
+    /> */}
     <ButtonCaption 
       caption='1 step'
       label={<img style={{ width: '60%'}} src={iconStep}/>}
+      onClick={stepAction}
     />
     <div className={s.displayContainer}>
       <span>Requests </span>

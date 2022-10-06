@@ -5,17 +5,20 @@ import s from './ButtonCaption.module.scss';
 export interface ButtonCaptionProps {
     caption: string;
     label: ReactNode;
+    onClick: any;
 }
 
 const ButtonCaption:FC<ButtonCaptionProps> = ({
   caption,
-  label
+  label,
+  onClick,
 }) => (
   <div className={s.btnContainer}>
     <span>{caption}</span>
     <div className={s.btnPlayContainer}>
       <ButtonCircle 
         label={label}
+        onClick={onClick}
       />
     </div>  
   </div>

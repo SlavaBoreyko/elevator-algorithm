@@ -1,9 +1,10 @@
 import React, { FC } from 'react';
+import { elevatorStatesType } from '../../Building/Building';
 import Display from '../Display/Display';
 import s from './DisplayHeader.module.scss';
 
 export interface DisplayHeaderProps {
-    elevatorList: any[];
+    elevatorList: elevatorStatesType[];
 }
 
 const DisplayHeader:FC<DisplayHeaderProps> = ({
@@ -14,12 +15,14 @@ const DisplayHeader:FC<DisplayHeaderProps> = ({
     {elevatorList.map((elevator, index) => (
       <>   
         <Display
+          key={`display-${index}`}
           data={{
-            currentFloor: 0,
-            direction: 'UP',
+            currentFloor: elevator.currentFloor,
+            direction: elevator.direction,
+            nextFloor: elevator.nextFloor && ((elevator.nextFloor < 0 ) ? undefined : elevator.nextFloor),
           }}
         />
-        <div/>
+        <div key={`div-display-${index}`}/>
       </>
     ))}
   </div>
